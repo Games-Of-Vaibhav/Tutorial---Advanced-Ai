@@ -42,8 +42,8 @@ namespace GamesOfVaibhav
         private void SetRandomPoint()
         {
             int randomPoint = Random.Range(0, Enemy.WayPoints.Length);
-            Transform target = Enemy.WayPoints[randomPoint];
 
+            Transform target = Enemy.WayPoints[randomPoint];
             if (Enemy.CurrentWayPoint)
             {
                 if (target == Enemy.CurrentWayPoint)
@@ -56,6 +56,7 @@ namespace GamesOfVaibhav
                         randomPoint++;
                 }
             }
+            target = Enemy.WayPoints[randomPoint];
 
             Enemy.CurrentWayPoint = target;
         }
